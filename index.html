@@ -155,30 +155,81 @@ button{
         endurance racing, and organized competition.
     </p>
 </section>
-
+    
 <section id="signup" class="section">
     <h2>Be First on the Grid</h2>
 
     <form action="https://formspree.io/f/xeeyabyw" method="POST">
 
-        <input 
-            type="text" 
-            name="name" 
+        <input
+            type="text"
+            name="name"
             placeholder="Name"
             required
         >
 
-        <input 
-            type="email" 
-            name="email" 
+        <input
+            type="email"
+            name="email"
             placeholder="Email"
             required
         >
 
+        <!-- League Interest -->
+        <div class="form-group">
+            <p><strong>Are you interested in league races?</strong></p>
+
+            <label>
+                <input
+                    type="radio"
+                    name="league_interest"
+                    value="Yes"
+                    required
+                >
+                Yes
+            </label>
+
+            <label style="margin-left: 20px;">
+                <input
+                    type="radio"
+                    name="league_interest"
+                    value="No"
+                >
+                No
+            </label>
+        </div>
+
+        <!-- Sim Racing Experience -->
+        <div class="form-group">
+            <label for="experience">
+                <strong>What's your sim racing experience?</strong>
+            </label>
+
+            <select
+                id="experience"
+                name="experience"
+                required
+            >
+                <option value="">🏁 Select your license level...</option>
+                <option value="Beginner">
+                    🍼 The racing line is just a suggestion, right?
+                </option>
+                <option value="Casual">
+                    🎮 I've definitely cut that chicane by accident...
+                </option>
+                <option value="Experienced">
+                    🛞 Trail braking is a lifestyle.
+                </option>
+                <option value="Veteran">
+                    👑 I own more steering wheels than normal people own chairs.
+                </option>
+            </select>
+        </div>
+
         <textarea
             name="comments"
-            placeholder="What events would you like to see?">
-        </textarea>
+            placeholder="What events would you like to see?"
+        ></textarea>
 
         <button type="submit">
             Notify Me When You Open
